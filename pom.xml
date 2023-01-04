@@ -57,6 +57,8 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
 
+        <gwt-bean-validators.version>1.11.11</gwt-bean-validators.version>
+
         <maven.compiler.plugin>3.10.1</maven.compiler.plugin>
         <maven.deploy.plugin>3.0.0-M1</maven.deploy.plugin>
         <maven.flatten.plugin>1.2.2</maven.flatten.plugin>

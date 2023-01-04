@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.gwtproject.validation.client.impl;
+package com.google.gwt.validation.client.impl;
 
 import java.io.Serializable;
 import java.lang.annotation.ElementType;
@@ -34,8 +34,8 @@ public final class ConstraintViolationImpl<T> implements ConstraintViolation<T>,
   private final ElementType elementType;
   private final ConstraintDescriptor<?> constraintDescriptor;
 
-  public static <T> ConstraintViolationImpl.Builder<T> builder() {
-    return new ConstraintViolationImpl.Builder();
+  public static <T> Builder<T> builder() {
+    return new Builder();
   }
 
   private ConstraintViolationImpl(
@@ -131,6 +131,23 @@ public final class ConstraintViolationImpl<T> implements ConstraintViolation<T>,
         + ")";
   }
 
+  @Override
+  public Object[] getExecutableParameters() {
+    // not supported by gwt implementation
+    return new Object[0];
+  }
+
+  @Override
+  public Object getExecutableReturnValue() {
+    // not supported by gwt implementation
+    return null;
+  }
+
+  @Override
+  public <U> U unwrap(final Class<U> ptype) {
+    throw new UnsupportedOperationException("GWT Validation does not support upwrap()");
+  }
+
   public static class Builder<T> {
     private String message;
     private String messageTemplate;
@@ -157,48 +174,47 @@ public final class ConstraintViolationImpl<T> implements ConstraintViolation<T>,
           this.constraintDescriptor);
     }
 
-    public ConstraintViolationImpl.Builder<T> setConstraintDescriptor(
-        ConstraintDescriptor<?> constraintDescriptor) {
+    public Builder<T> setConstraintDescriptor(ConstraintDescriptor<?> constraintDescriptor) {
       this.constraintDescriptor = constraintDescriptor;
       return this;
     }
 
-    public ConstraintViolationImpl.Builder<T> setElementType(ElementType elementType) {
+    public Builder<T> setElementType(ElementType elementType) {
       this.elementType = elementType;
       return this;
     }
 
-    public ConstraintViolationImpl.Builder<T> setInvalidValue(Object invalidValue) {
+    public Builder<T> setInvalidValue(Object invalidValue) {
       this.invalidValue = invalidValue;
       return this;
     }
 
-    public ConstraintViolationImpl.Builder<T> setLeafBean(Object leafBean) {
+    public Builder<T> setLeafBean(Object leafBean) {
       this.leafBean = leafBean;
       return this;
     }
 
-    public ConstraintViolationImpl.Builder<T> setMessage(String message) {
+    public Builder<T> setMessage(String message) {
       this.message = message;
       return this;
     }
 
-    public ConstraintViolationImpl.Builder<T> setMessageTemplate(String messageTemplate) {
+    public Builder<T> setMessageTemplate(String messageTemplate) {
       this.messageTemplate = messageTemplate;
       return this;
     }
 
-    public ConstraintViolationImpl.Builder<T> setPropertyPath(Path propertyPath) {
+    public Builder<T> setPropertyPath(Path propertyPath) {
       this.propertyPath = propertyPath;
       return this;
     }
 
-    public ConstraintViolationImpl.Builder<T> setRootBean(T rootBean) {
+    public Builder<T> setRootBean(T rootBean) {
       this.rootBean = rootBean;
       return this;
     }
 
-    public ConstraintViolationImpl.Builder<T> setRootBeanClass(Class<T> rootBeanClass) {
+    public Builder<T> setRootBeanClass(Class<T> rootBeanClass) {
       this.rootBeanClass = rootBeanClass;
       return this;
     }

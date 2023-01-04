@@ -47,7 +47,7 @@
   <inceptionYear>2018</inceptionYear>
 
   <properties>
-    <maven.gwt.plugin>1.0.0</maven.gwt.plugin>
+    <maven.gwt.plugin>1.0.1</maven.gwt.plugin>
 
     <gwt-event.version>1.0.0-RC1</gwt-event.version>
   </properties>
@@ -60,15 +60,9 @@
     </dependency>
 
     <dependency>
-      <groupId>javax.validation</groupId>
-      <artifactId>validation-api</artifactId>
-      <version>1.0.0.GA</version>
-    </dependency>
-    <dependency>
-      <groupId>javax.validation</groupId>
-      <artifactId>validation-api</artifactId>
-      <version>1.0.0.GA</version>
-      <classifier>sources</classifier>
+      <groupId>de.knightsoft-net</groupId>
+      <artifactId>gwt-bean-validators-engine</artifactId>
+      <version>${gwt-bean-validators.version}</version>
     </dependency>
   </dependencies>
 

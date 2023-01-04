@@ -20,7 +20,7 @@
 
   <!-- Other module inherits                                      -->
   <inherits name="org.gwtproject.event.Event"/>
-  <inherits name="javax.validation.Validation"/>
+  <inherits name="de.knightsoftnet.validators.GwtBeanValidatorsEngine" />
 
   <!-- sources -->
   <source path="client"/>

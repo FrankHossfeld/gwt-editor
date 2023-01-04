@@ -49,7 +49,13 @@
       <groupId>org.gwtproject.editor</groupId>
       <artifactId>gwt-editor</artifactId>
       <version>${revision}</version>
-<!--      <scope>test</scope>-->
+      <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <groupId>org.gwtproject</groupId>
+          <artifactId>gwt-user</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.gwtproject.editor</groupId>

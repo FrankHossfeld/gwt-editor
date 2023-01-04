@@ -17,13 +17,13 @@ package org.gwtproject.editor.client;
 
 import static org.junit.Assert.*;
 
+import de.knightsoftnet.validators.client.impl.ConstraintViolationImpl;
 import java.util.*;
 import javax.validation.ConstraintViolation;
 import javax.validation.Path;
 import org.gwtproject.editor.client.adapters.EditorSource;
 import org.gwtproject.editor.client.adapters.ListEditor;
 import org.gwtproject.editor.client.annotation.IsDriver;
-import org.gwtproject.validation.client.impl.ConstraintViolationImpl;
 import org.junit.Test;
 
 /** Tests error propagation in generated code. */
