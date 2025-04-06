@@ -5,6 +5,7 @@ on:
     branches:
       - dev
       - main
+      - issue/11
     paths-ignore:
       - "README.md"
 jobs:
