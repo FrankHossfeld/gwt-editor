@@ -65,7 +65,7 @@
         <maven.license.plugin>3.0</maven.license.plugin>
         <maven.shade.version>3.2.4</maven.shade.version>
         <maven.source.plugin>3.2.1</maven.source.plugin>
-        <plugin.version.surfire>3.2.3</plugin.version.surfire>
+        <maven.surfire.plugin>3.2.3</maven.surfire.plugin>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
