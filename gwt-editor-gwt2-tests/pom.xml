@@ -18,7 +18,7 @@
     <properties>
         <maven.gwt.plugin>1.1.0</maven.gwt.plugin>
 
-        <gwt.version>2.11.0</gwt.version>
+        <gwt.version>2.12.2</gwt.version>
         <junit.version>4.13.1</junit.version>
     </properties>
 
