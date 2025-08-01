@@ -22,8 +22,8 @@ on:
       - dev
       - main
       - issue/11
-    paths-ignore:
-      - "README.md"
+#    paths-ignore:
+#      - "README.md"
 jobs:
   build-jdk11:
     runs-on: ubuntu-latest
