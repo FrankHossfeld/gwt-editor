@@ -24,6 +24,18 @@
     <j2cl.version>0.8-SNAPSHOT</j2cl.version>
   </properties>
 
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>com.vertispan.j2cl</groupId>
+        <artifactId>junit-annotations</artifactId>
+        <version>${j2cl.version}</version>
+        <type>pom</type>
+        <scope>compile</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
   <dependencies>
     <!-- test dependencies -->
     <dependency>

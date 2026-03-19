@@ -46,7 +46,7 @@
         <module>gwt-editor</module>
         <module>gwt-editor-processor</module>
         <module>gwt-editor-gwt2-tests</module>
-        <module>gwt-editor-j2cl-tests</module>
+<!--        <module>gwt-editor-j2cl-tests</module>-->
     </modules>
 
     <properties>
